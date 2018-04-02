@@ -55,6 +55,7 @@ public class RemoteConfigWithCacheFactoryTest {
       @Override
       public void changed(IConfig config) {
         num.incrementAndGet();
+        System.out.println("changed");
       }
     }, false);
     assertThat(c.getInt("a"), is(-1));
